@@ -106,6 +106,15 @@ Introduce el número de un video:
 El video seleccionado es: {opcion}. {Lista_De_Videos.ElementAt(opcion - 1).Substring(16)} de {duracion_del_video_en_segundos} segundos.");
 }
 
+if (System.IO.Directory.Exists($@"..\..\..\Frames"))
+{
+    foreach (var archivo_frame in Directory.GetFiles($@"..\..\..\Frames", "*.*"))
+    {
+        File.SetAttributes(archivo_frame, FileAttributes.Normal);
+        File.Delete(archivo_frame);
+    }
+}
+
 var Carpeta_Frames = System.IO.Directory.CreateDirectory($@"..\..\..\Frames");
 
 var Interfaz_Video = new Window($@"Alexander Israel Flores Gutiérrez - OpenCVSharp - Guardar todos los Frames del Video {Lista_De_Videos.ElementAt(opcion - 1).Substring(16)}");
@@ -173,6 +182,16 @@ Introduce el número de un video:
 opcion = int.Parse(Console.ReadLine());
 video_seleccionado = new OpenCvSharp.VideoCapture(Lista_De_Videos.ElementAt(opcion - 1));
 duracion_del_video_en_segundos = Math.Round((video_seleccionado.FrameCount / video_seleccionado.Fps), MidpointRounding.ToEven);
+
+
+if (System.IO.Directory.Exists($@"..\..\..\Diferencias_Faciales"))
+{
+    foreach (var archivo_diferencia_facial in Directory.GetFiles($@"..\..\..\Diferencias_Faciales", "*.*"))
+    {
+        File.SetAttributes(archivo_diferencia_facial, FileAttributes.Normal);
+        File.Delete(archivo_diferencia_facial);
+    }
+}
 
 var Carpeta_Diferencias_Faciales = System.IO.Directory.CreateDirectory($@"..\..\..\Diferencias_Faciales");
 
