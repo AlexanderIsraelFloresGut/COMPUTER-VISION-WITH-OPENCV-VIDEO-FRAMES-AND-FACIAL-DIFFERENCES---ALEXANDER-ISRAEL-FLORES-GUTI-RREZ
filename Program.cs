@@ -123,7 +123,7 @@ El video seleccionado es: {opcion}. {Lista_De_Videos.ElementAt(opcion - 1).Subst
 
         NumeroDeFrame++;
 
-        var NombreFrame = $@"Frames\Frame No. {NumeroDeFrame}.jpg";
+        var NombreFrame = $@"Frames\Frame_No._{NumeroDeFrame}.jpg";
         Cv2.ImWrite(NombreFrame, frame);
 
         Interfaz_Video.ShowImage(frame);
@@ -185,7 +185,7 @@ Introduce el número de un video:
     video_seleccionado = new OpenCvSharp.VideoCapture(Lista_De_Videos.ElementAt(opcion - 1));
     duracion_del_video_en_segundos = Math.Round((video_seleccionado.FrameCount / video_seleccionado.Fps), MidpointRounding.ToEven);
 
-    System.IO.Directory.CreateDirectory("Diferencias Faciales");
+    System.IO.Directory.CreateDirectory("Diferencias_Faciales");
 
     var Interfaz_Video_Persona = new Window($@"Alexander Israel Flores Gutiérrez - OpenCVSharp - Guardar todas las Diferencias Faciales del Video {Lista_De_Videos.ElementAt(opcion - 1).Substring(7)}");
     NumeroDeFrame = 0;
@@ -240,7 +240,7 @@ Introduce el número de un video:
         Cv2.Resize(cara_actual, cara_actual, primera_cara.Size());
         Cv2.Absdiff(cara_actual, primera_cara, Diferencia_Facial);
         NumeroDeFrame++;
-        var Nombre_De_Diferencia_Facial = $@"Diferencias Faciales\Diferencia Facial No. {NumeroDeFrame}.jpg";
+        var Nombre_De_Diferencia_Facial = $@"Diferencias_Faciales\Diferencia_Facial_No._{NumeroDeFrame}.jpg";
         Cv2.ImWrite(Nombre_De_Diferencia_Facial, Diferencia_Facial);
         if (Cv2.WaitKey(1) == 113) // PRESIONAR q PARA DETENER.
             break;
@@ -265,7 +265,7 @@ Console.WriteLine($@"
 
 Todos las diferencias faciales fueron guardadas correctamente en esta ruta:
 
-{System.IO.Directory.GetCurrentDirectory()}\Diferencias Faciales");
+{System.IO.Directory.GetCurrentDirectory()}\Diferencias_Faciales");
 
 
 Console.WriteLine($@"
