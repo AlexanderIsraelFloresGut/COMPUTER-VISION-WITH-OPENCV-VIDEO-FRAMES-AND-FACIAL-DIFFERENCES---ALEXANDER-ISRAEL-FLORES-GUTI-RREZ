@@ -1,50 +1,54 @@
-# RECONOCIMIENTO_FACIAL_OPENCV - ALEXANDER ISRAEL FLORES GUTIERREZ
+I.	OBJETIVOS DEL PROGRAMA
 
-ESTE PROGRAMA TIENE COMO OBJETIVOS:
+   Este programa tiene como objetivos:
 
-1- EXTRAER TODOS LOS FRAMES DE UN VIDEO DADO.
+•	Extraer todos los frames de un video determinado.
 
-2 - RECONOCER Y ANALIZAR TODAS LAS CARAS DE LAS PERSONAS QUE APARECEN EN UN VIDEO DADO, EXTRAERLAS COMO FRAMES, CONVERTIRLAS A ESCALA DE GRISES, BINARIZARLAS Y LUEGO, CALCULAR LA DIFERENCIA ENTRE LAS CARAS,
-    COMO LA DIFERENCIA ABSOLUTA ENTRE CADA UNA DE LAS CARAS DETECTADAS Y LA PRIMER CARA DETECTADA.
+•	Calcular todas las diferencias faciales de las personas que aparezcan en un video determinado, a través del Reconocimiento y Análisis de todas las caras de las personas que aparezcan. Para ello, el programa extraerá cada cara como un frame, la convertirá a escala de 
+    grises, las convertirá a binarias y luego, calculará la diferencia entre las caras como la diferencia absoluta entre cada una de las caras detectadas y la primera cara detectada.
 
-NOTAS IMPORTANTES:
 
-A).   EL DIRECTORIO DEL PROGRAMA ES:
-  
-    RECONOCIMIENTO_FACIAL_OPENCV - ALEXANDER ISRAEL FLORES GUTIERREZ\bin\Debug\net6.0
+II.	DATOS IMPORTANTES:
 
-  PARA EL CORRECTO FUNCIONAMIENTO DEL PROGRAMA, ES IMPRESCINDIBLE QUE ÉSTE DISPONGA DE LOS ARCHIVOS NECESARIOS DE OPENCV, LOS CUALES SON:
+   El nombre de la carpeta raíz es:
 
-    haarcascade_frontalface_default.xml   <--------------ÉSTE SE ENCARGARÁ DE DETECTAR TODAS LAS FIGURAS RECTANGULARES QUE APAREZCAN EL EL VIDEO, ENTRE ELLAS LAS CARAS HUMANAS
-    haarcascade_eye.xml                   <--------------ÉSTE SE ENCARGARÁ DE DETECTAR TODAS LAS FIGURAS REDONDAS QUE APAREZCAN EL EL VIDEO, ENTRE ELLAS LOS OJOS, LABIOS, FOSAS NASALES, ETC. DE LAS CARAS DE LAS PERSONAS, ENTRE OTRAS FIGURAS MÁS DE ESTE TIPO
+    RECONOCIMIENTO_FACIAL_OPENCV - ALEXANDER ISRAEL FLORES GUTIERREZ
 
-  ESTOS ARCHIVOS ESTÁN EN LA RAÍZ DE ESTE REPOSITORIO, ENCUÉNTRELOS, CREE UNA CARPETA CON EL NOMBRE OpenCV_Archivos DENTRO DEL DIRECTORIO DEL PROGRAMA, Y COLOQUE AHÍ LOS ARCHIVOS DE OPENCV. ESTE NUEVO DIRECTORIO SERÁ
+  	El tipo de archivo de video que analiza este programa, por el momento es sólo .mp4 
 
-    RECONOCIMIENTO_FACIAL_OPENCV - ALEXANDER ISRAEL FLORES GUTIERREZ\bin\Debug\net6.0\OpenCV_Archivos
+Dentro de la carpeta raíz, se encuentra una carpeta llamada Videos, que es la carpeta que contiene todos los archivos de video .mp4 con los cuales se puede comprobar la funcionalidad del programa. La carpeta contiene unos videos de forma predeterminada. Puede probar el programa con ellos.
 
-B). EL TIPOS DE ARCHIVO DE VIDEO QUE ANALIZA ESTE PROGRAMA ES .mp4 
+El usuario puede perfectamente agregar más videos a esta carpeta.
 
-   PARA ANALIZAR VIDEOS, COLÓQUELOS EN UNA CARPETA CON EL NOMBRE Videos DENTRO DEL DIRECTORIO DEL PROGRAMA. ESTE NUEVO DIRECTORIO SERÁ:
-  
-    RECONOCIMIENTO_FACIAL_OPENCV - ALEXANDER ISRAEL FLORES GUTIERREZ\bin\Debug\net6.0\Videos
+Este directorio es:
 
-  EL PROGRAMA TIENE VALIDADA LA CONDICIÓN DE QUE EL PRIMER VIDEO QUE EL USUARIO SELECCIONE TENGA UNA DURACIÓN EXACTA DE 10 SEGUNDOS. DE ÉSTE EXTRAERÁ Y GUARDARÁ CADA FRAME.
-  
-  EL SIGUIENTE VIDEO PUEDE SER DE CUALQUIER DURACIÓN. DE ÉSTE DETECTARÁ Y ANALIZARÁ TODAS LAS CARAS, OJOS, LABIOS, FOSAS NASALES, Y OTRAS FIGURAS RECTANGULARES Y REDONDAS, CALCULARÁ LA DIFERENCIA ABSOLUTA ENTRE CADA CARA Y LA PRIMER CARA DETECTADA Y GUARDARÁ
-  ESTA DIFERENCIA.
+    RECONOCIMIENTO_FACIAL_OPENCV - ALEXANDER ISRAEL FLORES GUTIERREZ\Videos
 
-C). PARA GUARDAR TODOS LOS FRAMES DEL VIDEO, EL PROGRAMA CREA AUTOMÁTICAMENTE UNA CARPETA CON EL NOMBRE Frames DENTRO DEL DIRECTORIO DEL PROGRAMA. ESTE NUEVO DIRECTORIO ES
+El programa tiene validada la condición de que el primer video que el usuario seleccione debe tener una duración exacta de 10 segundos. De éste, extraerá y guardará cada frame.
 
-    RECONOCIMIENTO_FACIAL_OPENCV - ALEXANDER ISRAEL FLORES GUTIERREZ\bin\Debug\net6.0\Frames
+El siguiente video puede ser de cualquier duración. De éste, detectará y analizará todas las caras, ojos, labios, fosas nasales, y otras figuras rectangulares y redondas, calculará la diferencia absoluta entre cada cara y la primera cara detectada y guardará esta diferencia.
 
-D). PARA GUARDAR TODAS LAS DIFERENCIAS FACIALES, EL PROGRAMA CREA AUTOMÁTICAMENTE UNA CARPETA CON EL NOMBRE Diferencias_Faciales DENTRO DEL DIRECTORIO DEL PROGRAMA. ESTE NUEVO DIRECTORIO ES
+	Para guardar todos los frames del video, el programa crea de forma automática una carpeta con el nombre Frames dentro de la carpeta raíz. Este nuevo directorio es
 
-    RECONOCIMIENTO_FACIAL_OPENCV - ALEXANDER ISRAEL FLORES GUTIERREZ\bin\Debug\net6.0\Diferencias_Faciales
-    
+    RECONOCIMIENTO_FACIAL_OPENCV - ALEXANDER ISRAEL FLORES GUTIERREZ\Frames
 
-LUEGO DE HACER TODO LO ANTERIOR, EJECUTE EL PROGRAMA Y ÉSTE AUTOMÁTICAMENTE DETECTARÁ TODOS LOS ARCHIVOS DE VIDEO .mp4 QUE SE ENCUENTREN EN LA CERPETA Videos, LE SOLICITARÁ A USTED QUE SELCCIONE UNO DE ESTOS VIDEOS, MOSTRARÁ CADA FRAME DEL VIDEO
-EN UNA NUEVA VENTANA, GUARDARÁ TODOS LOS FRAMES DE ESTE VIDEO EN LA CARPETA Frames, LUEGO LE SOLICITARÁ A USTED QUE SELECCIONE OTRO VIDEO, Y DE CADA FRAME DE ESTE VIDEO, DETECTARÁ Y ANALIZARÁ LAS CARAS, OJOS, LABIOS, FOSAS NASALES DE LAS PERSONAS
-QUE APAREZCAN, Y OTRAS FIGURAS RECTANGULARES Y REDONDAS, MOSTRANDO TODOS ESTOS ELEMENTOS EN UNA NUEVA VENTANA. AL MISMO TIEMPO, AUTOMÁTICAMENTE IRÁ CALCULANDO LA DIFERENCIA ABSOLUTA ENTRE LAS CARAS DETECTADAS, COMO LA DIFERENCIA ENTRE CADA CARA
-QUE SE DETECTE Y LA PRIMER CARA DETECTADA Y LAS IRÁ GUARDANDO EN LA CARPETA Diferencias_Faciales.
+	Para guardar todas las diferencias faciales, el programa crea de forma automática una carpeta con el nombre Diferencias_Faciales dentro de la carpeta raíz del programa. Este nuevo directorio es
 
-PULSE EN CUALQUIER MOMENTO LA TECLA q PARA DETENER LA DETECCIÓN Y EL GUARDADO DE FRAMES, O LA DETECCIÓN DE FIGURAS RECTANGULARES O REDONDAS Y EL GUARDADO DE LAS DIFERENCIAS FACIALES.
+    RECONOCIMIENTO_FACIAL_OPENCV - ALEXANDER ISRAEL FLORES GUTIERREZ\ Diferencias_Faciales  
+
+
+III. FUNCIONALIDAD DEL PROGRAMA:
+
+Al ejecutar el programa, éste detectará de forma automática todos los archivos de video .mp4 que se encuentren en la carpeta Videos, le solicitará al usuario que seleccione uno de estos videos, mostrará cada frame del video en una nueva ventana y guardará todos los frames de este video en la carpeta Frames.
+
+Luego le solicitará al usuario que seleccione otro video, y de cada frame de este segundo video, detectará y analizará las caras, ojos, labios, fosas nasales, etc. de las personas que aparezcan, y otras figuras rectangulares y redondas, mostrando todos estos elementos en una nueva ventana. Al mismo tiempo, calculará la diferencia absoluta entre las caras detectadas, como la diferencia entre cada cara que se detecte y la primera cara detectada y guardará cada una de estas diferencias en la carpeta Diferencias_Faciales.
+
+Pulse en cualquier momento la tecla q para detener la detección y el guardado de frames, o para detener la detección de figuras rectangulares o redondas y el guardado de las diferencias faciales.
+
+
+
+
+
+Ing. Alexander Israel Flores Gutiérrez
+
+Managua, Nicaragua
