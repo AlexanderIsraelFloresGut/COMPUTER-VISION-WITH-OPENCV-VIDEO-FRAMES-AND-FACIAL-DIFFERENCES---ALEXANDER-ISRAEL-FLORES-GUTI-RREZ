@@ -45,6 +45,9 @@ Luego le solicitará al usuario que seleccione otro video, y de cada frame de es
 
 Pulse en cualquier momento la tecla q para detener la detección y el guardado de frames, o para detener la detección de figuras rectangulares o redondas y el guardado de las diferencias faciales.
 
+
+
+
 Con mucho placer en poder servir,
 
 
