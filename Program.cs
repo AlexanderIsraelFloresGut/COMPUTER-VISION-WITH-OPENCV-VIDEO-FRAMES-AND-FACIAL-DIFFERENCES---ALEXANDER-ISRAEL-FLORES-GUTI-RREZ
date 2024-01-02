@@ -176,7 +176,7 @@ duracion_del_video_en_segundos = Math.Round((video_seleccionado.FrameCount / vid
 
 var Carpeta_Diferencias_Faciales = System.IO.Directory.CreateDirectory($@"..\..\..\Diferencias_Faciales");
 
-var Interfaz_Video_Persona = new Window($@"Alexander Israel Flores Gutiérrez - OpenCVSharp - Guardar todas las Diferencias Faciales del Video {Lista_De_Videos.ElementAt(opcion - 1).Substring(7)}");
+var Interfaz_Video_Persona = new Window($@"Alexander Israel Flores Gutiérrez - OpenCVSharp - Guardar todas las Diferencias Faciales del Video {Lista_De_Videos.ElementAt(opcion - 1).Substring(16)}");
 NumeroDeFrame = 0;
 while (video_seleccionado.IsOpened())
 {
