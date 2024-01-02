@@ -21,8 +21,8 @@ int opcion;
 double duracion_del_video_en_segundos = 0;
 Mat frame = new();
 int NumeroDeFrame = 0;
-var Detector_De_Figuras_Rectangulares = new OpenCvSharp.CascadeClassifier(@"OpenCV Archivos\haarcascade_frontalface_default.xml");
-var Detector_De_Figuras_Circulares = new OpenCvSharp.CascadeClassifier(@"OpenCV Archivos\haarcascade_eye.xml");
+var Detector_De_Figuras_Rectangulares = new OpenCvSharp.CascadeClassifier(@"OpenCV_Archivos\haarcascade_frontalface_default.xml");
+var Detector_De_Figuras_Redondas = new OpenCvSharp.CascadeClassifier(@"OpenCV_Archivos\haarcascade_eye.xml");
 var Imagen_Gris = new Mat();
 var primera_cara = new Mat();
 var cara_actual = new Mat();
@@ -208,7 +208,7 @@ Introduce el número de un video:
             cara_actual = new(frame, rectangulo_cara);
             Cv2.Rectangle(frame, rectangulo_cara, rectangulo_color, 3);
             Cv2.CvtColor(cara_actual, Imagen_Gris_De_Cara_Detectada, ColorConversionCodes.BGRA2GRAY);
-            var Figuras_Circulares = Detector_De_Figuras_Circulares.DetectMultiScale(
+            var Figuras_Redondas = Detector_De_Figuras_Redondas.DetectMultiScale(
                image: Imagen_Gris_De_Cara_Detectada,
                minSize: new OpenCvSharp.Size(30, 30));
 
@@ -222,14 +222,14 @@ Introduce el número de un video:
             cara_actual = cara_imagen_gris_binaria.Clone();
 
 
-            foreach (var Figura_Circular in Figuras_Circulares)
+            foreach (var Figura_Redonda in Figuras_Redondas)
             {
                 var centro = new OpenCvSharp.Point
                 {
-                    X = (int)(Math.Round(Figura_Circular.X + Figura_Circular.Width * 0.5, MidpointRounding.ToEven) + rectangulo_cara.Left),
-                    Y = (int)(Math.Round(Figura_Circular.Y + Figura_Circular.Height * 0.5, MidpointRounding.ToEven) + rectangulo_cara.Top)
+                    X = (int)(Math.Round(Figura_Redonda.X + Figura_Redonda.Width * 0.5, MidpointRounding.ToEven) + rectangulo_cara.Left),
+                    Y = (int)(Math.Round(Figura_Redonda.Y + Figura_Redonda.Height * 0.5, MidpointRounding.ToEven) + rectangulo_cara.Top)
                 };
-                var radio = Math.Round((Figura_Circular.Width + Figura_Circular.Height) * 0.25, MidpointRounding.ToEven);
+                var radio = Math.Round((Figura_Redonda.Width + Figura_Redonda.Height) * 0.25, MidpointRounding.ToEven);
                 Cv2.Circle(frame, centro, (int)radio, figura_circular_color, thickness: 2);
             }
         }
@@ -270,4 +270,4 @@ Todos las diferencias faciales fueron guardadas correctamente en esta ruta:
 
 Console.WriteLine($@"
 
-¡TODO LISTO, POR ESTA OCASIÓN, ESTO ES TODO!");
+¡TODO LISTO, POR ESTA OCASIÓN, ESTO ES TODO, HASTA MUY PRONTO!");
