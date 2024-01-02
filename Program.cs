@@ -236,7 +236,7 @@ Introduce el número de un video:
 
         Interfaz_Video_Persona.ShowImage(frame);
 
-        cara_actual.Reshape(primera_cara.Channels(), 0);
+        cara_actual.Reshape(primera_cara.Channels());
         Cv2.Resize(cara_actual, cara_actual, primera_cara.Size());
         Cv2.Absdiff(cara_actual, primera_cara, Diferencia_Facial);
         NumeroDeFrame++;
