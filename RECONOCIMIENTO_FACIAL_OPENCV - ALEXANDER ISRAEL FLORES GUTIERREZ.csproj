@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="OpenCV_Archivos\" />
     <Folder Include="Videos\" />
   </ItemGroup>
 
