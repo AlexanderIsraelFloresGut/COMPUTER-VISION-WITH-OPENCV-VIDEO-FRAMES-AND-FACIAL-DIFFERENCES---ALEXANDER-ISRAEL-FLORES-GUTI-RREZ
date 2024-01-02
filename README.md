@@ -48,6 +48,10 @@ Pulse en cualquier momento la tecla q para detener la detección y el guardado d
 
 
 
+Con mucho placer en poder servir,
+
+
+
 
 Ing. Alexander Israel Flores Gutiérrez
 
