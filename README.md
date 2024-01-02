@@ -47,6 +47,8 @@ Pulse en cualquier momento la tecla q para detener la detección y el guardado d
 
 
 
+
+
 Ing. Alexander Israel Flores Gutiérrez
 
 Managua, Nicaragua
