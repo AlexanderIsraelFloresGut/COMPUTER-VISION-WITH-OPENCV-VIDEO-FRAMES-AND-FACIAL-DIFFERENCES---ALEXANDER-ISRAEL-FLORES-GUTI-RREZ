@@ -108,7 +108,7 @@ El video seleccionado es: {opcion}. {Lista_De_Videos.ElementAt(opcion - 1).Subst
 
 if (System.IO.Directory.Exists($@"..\..\..\Frames"))
 {
-    foreach (var archivo_frame in Directory.GetFiles($@"..\..\..\Frames", "*.*"))
+    foreach (var archivo_frame in Directory.EnumerateFiles($@"..\..\..\Frames", "*.*"))
     {
         File.SetAttributes(archivo_frame, FileAttributes.Normal);
         File.Delete(archivo_frame);
@@ -186,7 +186,7 @@ duracion_del_video_en_segundos = Math.Round((video_seleccionado.FrameCount / vid
 
 if (System.IO.Directory.Exists($@"..\..\..\Diferencias_Faciales"))
 {
-    foreach (var archivo_diferencia_facial in Directory.GetFiles($@"..\..\..\Diferencias_Faciales", "*.*"))
+    foreach (var archivo_diferencia_facial in Directory.EnumerateFiles($@"..\..\..\Diferencias_Faciales", "*.*"))
     {
         File.SetAttributes(archivo_diferencia_facial, FileAttributes.Normal);
         File.Delete(archivo_diferencia_facial);
