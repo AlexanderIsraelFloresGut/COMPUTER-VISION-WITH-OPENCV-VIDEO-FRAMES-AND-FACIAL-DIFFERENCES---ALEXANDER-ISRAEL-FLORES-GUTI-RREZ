@@ -160,8 +160,8 @@ Todos los frames del video fueron extraídos y guardados correctamente en esta r
 Console.WriteLine($@"
 
 Ahora vamos a extraer todas las diferencias faciales de una persona, utilizando reconocimiento facial en tiempo real.
-Las diferencias son entre la cara del primer fotograma, y la cara de cada uno de los demás fotogramas en el video.
-Estas diferencias serán obtenidas a partir de las caras convertidas a escala de grises y binarizadas.
+Las diferencias son entre la cara de cada uno de los fotogramas en el video y la cara del primer fotograma.
+Estas diferencias serán obtenidas a partir de las caras convertidas a escala de grises y luego a binarias.
 Selecciona un video (Esta vez puedes seleccionar cualquiera, RECUERDA que pulsando la tecla q puedes detener el proceso):
 
 ");
