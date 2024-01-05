@@ -34,7 +34,7 @@ El siguiente video puede ser de cualquier duración. De éste, detectará y anal
 
 	Para guardar todas las diferencias faciales, el programa crea de forma automática una carpeta con el nombre Diferencias_Faciales dentro de la carpeta raíz del programa. Este nuevo directorio es
 
-    RECONOCIMIENTO_FACIAL_OPENCV - ALEXANDER ISRAEL FLORES GUTIERREZ\ Diferencias_Faciales  
+    RECONOCIMIENTO_FACIAL_OPENCV - ALEXANDER ISRAEL FLORES GUTIERREZ\Diferencias_Faciales  
 
 
 III. FUNCIONALIDAD DEL PROGRAMA:
